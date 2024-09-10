@@ -7,7 +7,7 @@ ou seja, para resolver problemas
 
 ## Peças de uma linguagem:
 - [x] Comentários - //
-- Declaração de variáveis (const, let)
+- [x] Declaração de variáveis (const, let)
 - Operadores (atribuição, concatenação, matemáticos, lógicos)
 - Tipos de dados (string, number, boolean)
 - Estrutura de dados (functions, object, array)
@@ -20,13 +20,30 @@ Processar os dados (manipular, alterar...)
 Apresentar os dados
 
 ## Escopos e variáveis:
-Variáveis locais e globais
-Constantes
+- [x] Variáveis locais e globais
+- [x] Constantes
 
 ## Tipos de dados:
-Strings (textos) "" '' ``
-Number (números) 2, 1.3
-Function
+- [x] Strings (textos) "" '' ``
+- [x] Number (números) 2, 1.3
+- [x] Boolean true, false
 
 ## Operadores:
-Operador de atribuição de valor
+- [x] Operador de atribuição de valor =
+- [x] Operador de concatenação (junção de duas ou mais strings) +
+
+## Estrutura de dados:
+
+### Arrays:
+- [x] Uma lista que contem qualquer tipo de dado
+
+### Objetos:
+- [x] Atributos e métodos
+- [x] Criação e manipulação de objetos
+- [x] Acesso a propriedades de objetos
+
+### Functions
+- [x] criar, passar argumento
+- [x] executar
+- [x] arrow function
+- [x] named function
