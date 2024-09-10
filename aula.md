@@ -52,4 +52,4 @@ Apresentar os dados
 - [x] while
 
 ## Condicionais
-- [] switch
+- [x] switch
