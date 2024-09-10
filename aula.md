@@ -6,8 +6,8 @@ ou seja, para resolver problemas
     **Algoritmo** sequência de passos lógicos e finitos para resolver um problema
 
 ## Peças de uma linguagem:
-- [x] Comentários - //
-- [x] Declaração de variáveis (const, let)
+- Comentários - //
+- Declaração de variáveis (const, let)
 - Operadores (atribuição, concatenação, matemáticos, lógicos)
 - Tipos de dados (string, number, boolean)
 - Estrutura de dados (functions, object, array)
@@ -29,8 +29,9 @@ Apresentar os dados
 - [x] Boolean true, false
 
 ## Operadores:
-- [x] Operador de atribuição de valor =
-- [x] Operador de concatenação (junção de duas ou mais strings) +
+- [x] Operador de atribuição de valor: =
+- [x] Operador de concatenação: (junção de duas ou mais strings) +
+- [x] Operadores de comparação: ==, !=, >, <, <=, >=
 
 ## Estrutura de dados:
 
@@ -53,6 +54,7 @@ Apresentar os dados
 
 ## Condicionais
 - [x] switch
+- [x] if/else
 
 ## Módulos em Node.js
 - [x] Importação de módulos (require, CommonJS)
