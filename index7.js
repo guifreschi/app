@@ -1,14 +1,25 @@
 const { select, input, checkbox } = require('@inquirer/prompts')
+const fs = require("fs").promises
 
 let mensagem = "Bem Vindo ao App de Metas!";
-let meta = {
-    value: "Tomar 3L de água todos os dias.",
-    checked: false
+
+let metas
+
+const carregarMetas = async () => {
+    try {
+        const dados = await fs.readFile("metas.json", "utf-8")
+        metas = JSON.parse(dados)
+    }
+    catch(erro) {
+        metas = []
+    }
 }
 
-let metas = [ meta ]
+const salvarMetas = async () => {
+    await fs.writeFile("metas.json", JSON.stringify(metas, null, 2))
+}
 
-const cadastrarMeta = async() => {
+const cadastrarMeta = async () => {
     const meta = await input({ message: "Digite a meta:"})
 
     if(meta.length == 0) {
@@ -58,6 +69,11 @@ const listarMetas = async() => {
 }
 
 const metasRealizadas = async () => {
+    if(metas.length == 0) {
+        mensagem = "Não há metas registradas!"
+        return
+    }
+
     const realizadas = metas.filter((meta) => {
         return meta.checked
     })
@@ -75,6 +91,11 @@ const metasRealizadas = async () => {
 
 
 const metasAbertas = async () => {
+    if(metas.length == 0) {
+        mensagem = "Não há metas registradas!"
+        return
+    }
+
     const abertas = metas.filter((meta) => {
         return !meta.checked
     })
@@ -91,6 +112,11 @@ const metasAbertas = async () => {
 }
 
 const deletarMetas = async() => {
+    if(metas.length == 0) {
+        mensagem = "Não há metas registradas!"
+        return
+    }
+    
     const metasDesmarcadas = metas.map((meta) => {
         return { value: meta.value, checked: false }
     })
@@ -126,6 +152,8 @@ const mostrarMensagem = () => {
 }
 
 const start = async () => {
+    await carregarMetas()
+    await salvarMetas()
 
     while(true){
         mostrarMensagem()
@@ -164,9 +192,11 @@ const start = async () => {
         switch(opcao) {
             case "cadastrar":
                 await cadastrarMeta()
+                await salvarMetas()
                 break
             case "listar":
                 await listarMetas()
+                await salvarMetas()
                 break
             case "realizadas":
                 await metasRealizadas()

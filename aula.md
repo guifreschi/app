@@ -39,6 +39,7 @@ Apresentar os dados
 ### Arrays:
 - [x] Uma lista que contem qualquer tipo de dado
 - [x] Métodos de array: push, [find, forEach, filter, map] = HOF (higher order functions)
+
 ### Objetos:
 - [x] Atributos e métodos
 - [x] Criação e manipulação de objetos
@@ -60,6 +61,12 @@ Apresentar os dados
 ## Módulos em Node.js
 - [x] Importação de módulos (require, CommonJS)
 - [x] Biblioteca 'inquirer' para criar prompts interativos
+- [x] FS (file system)
+
+## JSON
+- [x] Javascript Object Notation (.json)
+- [x] JSON.parse(): transforma de JSON para JS
+- [x] JSON.stringfy(): transforma de JS para JSON
 
 ## Programação assíncrona e Promises
 - [x] uso de funções assíncronas (async, await)
